@@ -39,10 +39,10 @@ Function Invoke-RestMethod20
 {
     param
     (
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory=$true)]
         [RestMethod]
         $Method,
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
         [System.String]
         $Uri,
@@ -112,5 +112,5 @@ Function Invoke-RestMethod20
     {
         return $response
     }
-    return $response | ConvertFrom-Json20Pipe
+    return $response | ConvertFrom-Json20
 }
